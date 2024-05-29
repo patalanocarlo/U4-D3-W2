@@ -1,4 +1,4 @@
-public class Customer {
+public class Customer { //Qui ho settato Customer
     Long id;
     String name;
     Integer tier;
@@ -8,7 +8,7 @@ public class Customer {
         this.name = name;
         this.tier = tier;
     }
-public Integer getTier(){
+public Integer getTier(){ //Getter del Tier per lesercizio4 dove devo confrontare il Tier.
         return tier;
 }
 

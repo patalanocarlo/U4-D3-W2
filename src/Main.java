@@ -42,8 +42,9 @@ public class Main {
 
         List<Order> orders = new ArrayList<>();
         Customer customer = new Customer(19049L, "Carlo Patalano", 2);
+        Customer customer2=new Customer(234L, "Luigi Cuomo",1);
         orders.add(new Order(19049L, "In spedizione", LocalDate.now(), LocalDate.now().plusDays(2), products, customer));
-
+orders.add(new Order(234L,"Pacco in ritardo",LocalDate.now(), LocalDate.now().plusDays(3),ProdottiPerBambini,customer2 ));
         List<Order> ordiniClientiLivello2 = orders.stream()
                 .filter(order -> order.getCustomer().getTier() == 2)
                 .filter(order -> order.getOrderDate().isAfter(LocalDate.of(2024, 5, 20)))
