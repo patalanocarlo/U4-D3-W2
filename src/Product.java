@@ -10,6 +10,13 @@ public class Product {
         this.category=category;
         this.price=price;
     }
+public Long getid(){
+        return id;
+}
+
+    public String getName() {
+        return name;
+    }
 
     public String getCategory() {
         return category;

@@ -1,3 +1,4 @@
+import java.time.Instant;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -21,8 +22,17 @@ public class Order {
 public List<Product> getProducts(){
         return products;
 }
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public LocalDate getOrderDate() {
+        return orderDate;
+    }
 
 public String toString(){
     return "Order{id=" + id + ", status=" + status + " " + ", orderDate=" + orderDate + ", deliveryDate=" + deliveryDate + ", products=" + products +  '}';
 }
+
+
 }

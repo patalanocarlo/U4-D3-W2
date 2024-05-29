@@ -8,6 +8,8 @@ public class Customer {
         this.name = name;
         this.tier = tier;
     }
-
+public Integer getTier(){
+        return tier;
+}
 
 }
