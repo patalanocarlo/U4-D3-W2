@@ -28,5 +28,5 @@ public Long getid(){ //Faccio i relativi getter e setter sulle istanze dei valor
 
     public String toString() { //Con il toString vado a stringifizzare in stringa:
         return "Prodotti :{id=" + id + " "  + "name=" + name + ""  + ", category='" + category + " " + ", price=" + price + '}';
-    } // passo l'id il nome cateogria e prezzo ai prodotti...
+    } // passo l'id il nome cateogria e prezzo dei prodotti...
 }

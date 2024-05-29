@@ -7,30 +7,38 @@ public class Main {
     public static void main(String[] args) {
 
         List<Product> products = List.of(
+                //Prima parte:Esercizio 1
                 new Product(134L, "Harry Potter", "Books", 120.0),
                 new Product(243L, "Il signore degli Anelli", "Books", 90.0),
                 new Product(35634L, "JoJo", "Manga", 150.0),
                 new Product(4566L, "Tolkien", "Books", 200.0),
+
+                //Seconda Parte:Esercizio 2
                 new Product(23254L, " Libro per Bambini" , "Baby" ,50),
                 new Product(2864L, " Libro per Bambini2" , "Baby" ,60.32),
                 new Product(2474L, " Libro per Bambini3" , "Baby" ,90.85),
+
+                //Terza parte: Esercizio 3
                 new Product(1990L," Elicottero Giocattolo" , "Boys" , 34.21),
                 new Product(17546L, "Mongolfiera Giocattolo" , "Boys" , 120.32)
         );
 
-
+//Esercizio 1 prima lambda Function: List item
         List<Product> filteredProducts = products.stream()
                 .filter(p -> "Books".equals(p.getCategory()) && p.getPrice() > 100)
                 .collect(Collectors.toList());
         System.out.println("Questi sono i libri che ho filtrato per ottenere solo quelli con il prezzo maggiore di 100 e la categoria books:");
         filteredProducts.forEach(System.out::println);
 
+
+        //Esercizio 2 Seconda lambda function con un List item
         List<Product> ProdottiPerBambini = products.stream()
                 .filter(p -> "Baby".equals(p.getCategory()))
                 .collect(Collectors.toList());
         System.out.println("Ecco i prodotti filtrati per bambini:");
         ProdottiPerBambini.forEach(System.out::println);
 
+        //Esercizio 3
         List<Product>ProdottiPerRagazzi = products.stream()
                 .filter(p -> "Boys".equals(p.getCategory()) )
                 .map(p -> new Product(p.getid() , p.getName(), p.getCategory(),p.getPrice() * 0.9))
@@ -39,7 +47,7 @@ public class Main {
 
         ProdottiPerRagazzi.forEach(System.out::println);
 
-
+ //Esercizio 4
         List<Order> orders = new ArrayList<>();
         Customer customer = new Customer(19049L, "Carlo Patalano", 2);
         Customer customer2=new Customer(234L, "Luigi Cuomo",1);
